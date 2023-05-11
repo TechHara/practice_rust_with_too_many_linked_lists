@@ -62,3 +62,11 @@ fn basics() {
     assert_eq!(list.pop(), Some(1));
     assert_eq!(list.pop(), None);
 }
+
+#[test]
+fn test_drop() {
+    let mut list = List::new();
+    for i in 0..1000000 {
+        list.push(i);
+    }
+}

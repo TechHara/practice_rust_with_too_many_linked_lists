@@ -171,3 +171,11 @@ fn into_iter() {
     assert_eq!(iter.next_back(), None);
     assert_eq!(iter.next(), None);
 }
+
+#[test]
+fn test_drop() {
+    let mut list = List::new();
+    for i in 0..1000000 {
+        list.push_front(i);
+    }
+}

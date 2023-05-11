@@ -752,3 +752,11 @@ fn check_links<T: Eq + std::fmt::Debug>(list: &LinkedList<T>) {
 
     assert_eq!(from_front, re_reved);
 }
+
+#[test]
+fn test_drop() {
+    let mut list = LinkedList::new();
+    for i in 0..1000000 {
+        list.push_front(i);
+    }
+}

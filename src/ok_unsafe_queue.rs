@@ -30,7 +30,7 @@ impl<T> List<T> {
     pub fn push(&mut self, elem: T) {
         todo!()
     }
-    
+
     pub fn pop(&mut self) -> Option<T> {
         todo!()
     }
@@ -201,4 +201,12 @@ fn miri_food() {
     list.push(7);
 
     // Drop it on the ground and let the dtor exercise itself
+}
+
+#[test]
+fn test_drop() {
+    let mut list = List::new();
+    for i in 0..1000000 {
+        list.push(i);
+    }
 }

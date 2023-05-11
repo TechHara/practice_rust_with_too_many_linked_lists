@@ -167,3 +167,11 @@ fn iter_mut() {
     assert_eq!(iter.next(), Some(&mut 2));
     assert_eq!(iter.next(), Some(&mut 1));
 }
+
+#[test]
+fn test_drop() {
+    let mut list = List::new();
+    for i in 0..1000000 {
+        list.push(i);
+    }
+}

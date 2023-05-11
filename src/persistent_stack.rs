@@ -82,3 +82,11 @@ fn iter() {
     assert_eq!(iter.next(), Some(&2));
     assert_eq!(iter.next(), Some(&1));
 }
+
+#[test]
+fn test_drop() {
+    let mut list = List::new();
+    for i in 0..1000000 {
+        list = list.prepend(i);
+    }
+}
